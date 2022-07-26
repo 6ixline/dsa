@@ -1,3 +1,5 @@
+// Frequency Counter Patterns
+// My Solution
 function validAnagram(str1, str2){
     if(str1.length != str2.length){
         return false;
@@ -25,6 +27,8 @@ function validAnagram(str1, str2){
     }
     return true;
 }
+
+
 
 console.log(validAnagram('', ''));
 console.log(validAnagram('aaz', 'zza'));
