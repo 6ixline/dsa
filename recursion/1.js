@@ -37,6 +37,10 @@ function recursiveRange(num){
    return sum;
 }
 
+function recursiveRange(x){
+    if (x === 0 ) return 0;
+    return x + recursiveRange(x-1);
+ }
 // console.log(recursiveRange(6)) // 21
 // console.log(recursiveRange(10)) // 55
 
@@ -46,10 +50,9 @@ function recursiveRange(num){
 Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every number thereafter is equal to the sum of the previous two numbers.
 
 */
-
-function fib(){
-    
-    
+function fib(n){
+    if (n <= 2) return 1;
+    return fib(n-1) + fib(n-2);
 }
 // fib(4) // 3
 // fib(10) // 55
