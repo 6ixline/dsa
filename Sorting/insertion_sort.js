@@ -1,13 +1,14 @@
-function insertionSort(arr){
-	var currentVal;
-    for(var i = 1; i < arr.length; i++){
+// O(N^2)
+function insertion_sort(arr){
+    for(let i = 0; i < arr.length; i++){
         currentVal = arr[i];
-        for(var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
-            arr[j+1] = arr[j]
+        for(var j = i - 1; j >= 0 && currentVal < arr[j]; j--){
+            arr[j + 1] = arr[j];
         }
-        arr[j+1] = currentVal;
+        arr[j+ 1] = currentVal;
     }
+
     return arr;
 }
 
-insertionSort([2,1,9,76,4])
+console.log(insertion_sort([54, 43, 74, 4, 6, 8]))
